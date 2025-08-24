@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head><title>My Order </title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="my-orders.css">
+
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    
+          ul {
+  background-color: pink;
+  display: flex;      
+  justify-content: center;     
+  align-items: center;        
+  flex-wrap: wrap;             
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px black;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  
+}
+
+ul li {
+  list-style: none;
+  background-color: black;
+  color: white;
+  padding: 8px ;
+  font-size: 16px;
+  border-radius: 10px;
+height: 25px;
+line-height: 25px;
+  display: inline-block;
+}
+ul li:active{
+  background-color: yellow;
+  color:red;
+  transition: 0.5;
+}
+li:hover{
+  background-color: lightgray;
+  color: black;
+  border:2px solid black;
+}
+
+
+/* छोटे स्क्रीन पर responsive font size */
+@media (max-width: 600px) {
+  ul li {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+#upload{
+  text-align: center;
+  background-color: #58fdf5 ;
+  font-size: 30px;
+  margin-block: 5px;
+  padding: 5px;
+  position: sticky;
+  top: 57px;
+z-index: 999999;
+border-radius: 10px;
+box-shadow: 0px 5px 0px white;
+border: 2px solid black;
+}
+#upload:hover{
+  background-color: gray;
+  color: white;
+}
+  
+    
+  .no{
+  color:gray;
+  text-align: center;
+  box-shadow: 0px 0px 3px black;
+  padding: 8px;
+  
+  }
+  
+
+.a1{
+  background-color: red;
+  color: yellow;
+  font-size: 21px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+
+}
+
+.orders-container {
+  max-width: 800px;
+  margin: auto;
+  background: lightyellow;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.orders-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 53px;
+  
+  
+  
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  border-radius: 10px;
+}
+
+.order-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: lightpink;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px black;
+}
+
+.order-card:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.order-card h3 {
+  margin: 0 0 10px;
+  color: #007b5e;
+}
+span{
+  padding: 5px;
+}
+#upload:hover{
+  background-color: lightgray;
+  color: black;
+}
+#upload:active{
+  background-color: yellow;
+  color: red;
+}
+#img{
+  width: 130px;
+  height: 110px;
+  background-color: black;
+  display:block;
+}
+.delete-btn{
+  color: white;
+  font-size: 25px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.delete-btn:active{
+  background-color: black;
+  color:red;
+}
+  </style>
+    </head>
+    <body>
+      
+      
+             <ul><b> 
+  <li> <a href="index.html " style="text-decoration: none; color: white;">Home</a></li>
+      <li><a href="About us1.html" style="text-decoration:none; color:white;">About us </a></li>
+          <li><a href="Contact us1.html" style="text-decoration:none; color:white;">Contact us </a></li>
+              <li>My Order</li>
+  </ul></b>
+  
+  <div id="upload"><b>
+        <a href="Choose your photo.html" style="text-decoration:none; color:black;">Customize Your Product</a></b>
+  </div>
+      
+      <div class="a1"><b>S. K. T-Shirt Printing & Gift Gallery</b></div><br>
+      
+      
+      
+    
+
+
+
+
+  <div class="orders-container">
+    
+    <h2>🧾 My Orders</h2>
+    
+    
+    <div class="order-list">
+      
+      <div class="order-card">
+        <p><strong>Total Price :- </strong><span>₹${order.totalPrice}</span></p>
+      </div>
+      
+    </div>
+  </div>
+
+      
+      
+      
+      
+   <div class="no"><b>No More Orders</b></div>
+   
+<script>
+  function renderOrders() {
+    const orders = JSON.parse(localStorage.getItem('myOrders')) || [];
+    const orderList = document.querySelector(".order-list");
+
+    orderList.innerHTML = ""; 
+    if (orders.length === 0) {
+      document.querySelector(".no").style.display = "block";
+    } else {
+      document.querySelector(".no").style.display = "none";
+    }
+
+/* orders.forEach((order, index) => {
+      const card = document.createElement("div");
+      card.className = "order-card";
+
+      card.innerHTML = `
+        <h3>Order :- <span>${index + 1}</span></h3>
+        <img src="${order.img}" id="img" alt="Product Image" />
+        <p><strong>Product :- </strong><span>${order.product}</span></p>
+        <p><strong>Size :- </strong><span>${order.size}</span></p>
+        <p><strong>Price :- </strong><span>₹${order.price}</span></p>
+        <p><strong>Status:- </strong> <span>${order.status}</span></p>
+        <p><strong>Date:- </strong> <span>${order.date}</span></p>
+        <button class="delete-btn" data-index="${index}">Delete</button>
+      `;
+
+      orderList.appendChild(card);
+    });*/
+
+orders.forEach((order, index) => {
+  const card = document.createElement("div");
+  card.className = "order-card";
+
+  card.innerHTML = `
+    <h3>Order :- <span>${index + 1}</span></h3>
+    <img src="${order.img}" id="img" alt="Product Image" />
+    <p><strong>Product :- </strong><span>${order.product}</span></p>
+    <p><strong>Size :- </strong><span>${order.size}</span></p>
+    <p><strong>Quantity :- </strong><span>${order.quantity}</span></p>
+    <p><strong>Price (per unit) :- </strong><span>₹${order.price}</span></p>
+    <p><strong>Total Price :- </strong><span>₹${order.totalPrice}</span></p>
+    <p><strong>Status :- </strong><span>${order.status}</span></p>
+    <p><strong>Date :- </strong><span>${order.date}</span></p>
+    <button class="delete-btn" data-index="${index}">Delete</button>
+  `;
+
+  orderList.appendChild(card);
+});
+
+
+
+
+
+
+    
+    document.querySelectorAll(".delete-btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+        const i = this.getAttribute("data-index");
+        let orders = JSON.parse(localStorage.getItem('myOrders')) || [];
+        if (confirm("Are you sure you want to delete this order?")) {
+          orders.splice(i, 1); 
+          localStorage.setItem('myOrders', JSON.stringify(orders));
+          renderOrders(); 
+        }
+      });
+    });
+  }
+
+  
+  renderOrders();
+</script>
+   </body>
+  </html>
