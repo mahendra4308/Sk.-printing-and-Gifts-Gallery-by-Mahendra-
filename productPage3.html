@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hi">
+<html>
+<head>
+  <title>Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{
+    background-color: lightyellow;
+  }
+  ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 5px;
+  box-shadow: 0px 0px 10px black;
+  background-color: pink;
+  position: sticky;
+  top: 6px;
+}
+
+ul li {
+  list-style: none;
+  padding: 7px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 2px;
+  display:inline-block;
+  height:25px;
+}
+    li:hover{
+     background-color: lightgray; 
+     color:black;
+      border: 2px solid black;
+      padding: 7px;
+      transition:0.3s;
+    }
+    li:active{
+      color: red;
+      background-color: yellow;
+    }
+    .menu{
+      background-color: white;
+      height: auto;
+      width: auto;
+      position: sticky;
+      top: 0;
+    }
+        
+    #upload{
+      
+      background-color: #58fdf5;
+      color: #0d2c55;
+      border: 2px solid black;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 10px;
+      padding: 5px;
+      position: sticky;
+      top: 55px;
+  margin-top: -5px;
+  display: inline-block;
+  width: 97.5%;
+  box-shadow: 0px 7px 0px white;
+    }
+  
+    #upload:hover{
+      background-color: lightgray;
+      color: black;
+      transition: 0.3s;
+      padding: 7px;
+    }
+    #upload:active{
+      background-color: yellow;
+      color: red;
+    }
+  
+  
+  
+    .product-card {
+      background-color: white;
+      width: 350px;
+      height: 530px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 2px 2px 8px #aaa;
+      border: 2px solid black;
+      margin-top: 15px;
+    }
+    .product-card img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .product-card h4 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #333;
+    }
+    .product-card p {
+      font-size: 20px;
+      color: green;
+      margin: 0;
+    }
+    .buy-btn{ 
+      font-size:25px;
+    margin: 10px; 
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius:10px;
+    }
+    .buy-btn:active{
+      background-color: yellow;
+      color: red;
+    }
+    .size-row {
+  display: flex;
+  align-items: center;
+  
+  flex-wrap: wrap;
+ 
+}
+
+
+  </style>
+</head>
+<body>
+  
+    <div class="menu">
+<ul>
+  <b> <a href="index.html">
+  <li>Home</li></a>
+      <a href="About us1.html" style="text-decoration:none; color:white;"><li>About us</li></a> 
+      <a href="Contact us1.html" style="text-decoration:none; color:white;"><li>Contact us</li></a>
+   <a href="My Order.html" style="text-decoration:none; color:white;"><li>My Order</li></a>
+          </b>      
+  </ul>
+<a href="Choose your photo.html" style="text-decoration:none; color:black;">  <div id="upload"><b>Customize Your Product</b>
+  </div></a>
+  </div>
+  
+
+<div class="product-card">
+  <img src="Pic12.png" alt="T-Shirt">
+  <hr>
+  <h4>Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery
+
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic12.png')">Buy Now</button>
+</p>
+</div>
+
+
+<div class="product-card">
+  <img src="Pic40.webp" alt="T-Shirt">
+  <hr>
+  <h4> Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery 
+
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic40.webp')">Buy Now</button>
+</p>
+</div>
+
+
+<div class="product-card">
+  <img src="Pic41.jpg" alt="T-Shirt">
+  <hr>
+  <h4>Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery 
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic41.jpg')">Buy Now</button></p>
+</div>
+
+
+
+<div class="product-card">
+  <img src="Pic42.jpg" alt="T-Shirt">
+  <hr>
+  <h4>Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery 
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic42.jpg')">Buy Now</button></p>
+</div>
+
+
+
+
+
+
+<div class="product-card">
+  <img src="Pic43.webp" alt="T-Shirt">
+  <hr>
+  <h4> Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery  
+
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic43.webp')">Buy Now</button>
+</p>
+</div>
+
+
+
+
+<div class="product-card">
+  <img src="Pic44.webp" alt="T-Shirt">
+  <hr>
+  <h4> Mug</h4>
+  <p>₹199</p>
+  <div class="size-row">
+    Size: Standard
+</div>
+<p >Free Delivery  
+    <button class="buy-btn" onclick="buyNow(' mug', '199',  'Pic44.webp')">Buy Now</button></p>
+</div>
+<script>
+  function buyNow(name, price, img, event) {
+    // सिर्फ product details pass करना है
+    localStorage.setItem("productName", name);
+    localStorage.setItem("productPrice", price);
+    localStorage.setItem("productImage", img);
+
+    // Buy-now page खोलना है (नया tab)
+    window.open('Buy-now.html', '_blank');  
+  }
+</script>
+
+</body>
+</html>
