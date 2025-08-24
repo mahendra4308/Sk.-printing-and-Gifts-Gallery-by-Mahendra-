@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+  body {
+  margin: 5px;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color:#f9faf7;
+  margin-top:0;
+  
+}
+  .a{
+    text-shadow: 1px  1px green;
+    font-size: 30px;
+  }
+  
+  
+      .container1{
+        background-color: #171c3bfe;
+        color:red;
+        text-align:center ;
+        font-size:35px;
+    padding: 4px;
+    border: 3px solid red;
+    border-radius: 10px;
+font-family: 'Lobster', cursive;
+outline: 2px solid green;
+      }
+      .b{
+        color: green;
+        text-shadow: 1px 1px red;
+        
+      }
+    .c{
+      background-color: red;
+      background-image: linear-gradient(blue, purple, red);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+      width: 90%;
+      display:inline-block;
+      margin-left: 0px;
+      padding:5px ;
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      
+      
+    }
+    .back{
+      background-color: lightgray;
+      width: 90%;
+      border-radius: 50px 10px ;
+      margin-top:-10px;
+      
+      display:inline-block;
+      border-left: 7px solid red;
+      border-right: 7px solid red;
+      box-shadow: 0px 0px 5px black;
+      z-index: 0;
+      position: relative;
+    }
+.back:hover{
+  transform: scale(1.05) rotateY(360deg);
+  transition: 2s ;
+}
+    .scroll{
+      background-color: lightgray;
+      color:purple;
+      font-size: 18px;
+      padding: 7px;
+      text-align: center;
+      animation: color 10s linear infinite;
+      border-radius:10px;
+    
+      width: 98%;
+    }
+@keyframes color{
+  0%{ color:red;}
+   25%{ color:green;}
+    50%{ color:black;}
+     75%{ color:blue;}
+     100%{ color:lime;}
+}
+    .container {
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+      display: flex;
+      width: 100%;
+      height: 500px;
+      scroll-behavior: smooth;
+      border-radius: 15px;
+      border:3px solid black;
+    }
+    .child {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: #fff;
+    }
+    .child:nth-child(1) { background: red; }
+    .child:nth-child(2) { background: green; }
+    .child:nth-child(3) { background: blue; }
+   .child:nth-child(4) { background: purple; }
+   .child:nth-child(5) { background: lime; }
+    .dots {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 27px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: gray;
+      display: inline-block;
+      margin: 5px;
+    }
+    .dot.active {
+      background: black;
+    }
+    
+
+  
+  
+    .menu{
+      background-color: white;
+      height: auto;
+      width: auto;
+      position: sticky;
+      top: 0;
+    }
+    
+  
+
+      ul {
+  background-color: pink;
+  display: flex;      
+  justify-content: center;     
+  align-items: center;        
+  flex-wrap: wrap;             
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px black;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  
+}
+
+ul li {
+  list-style: none;
+  background-color: black;
+  color: white;
+  padding: 8px ;
+  font-size: 16px;
+  border-radius: 10px;
+
+  display: inline-block;
+}
+ul li:active{
+  background-color: yellow;
+  color:red;
+  transition: 0.5;
+}
+li:hover{
+  background-color: lightgray;
+  color: black;
+  border:2px solid black;
+}
+#upload{
+  text-align: center;
+  background-color: #58fdf5 ;
+  font-size: 28px;
+  margin-block: 5px;
+  padding: 5px;
+  position: sticky;
+  top: 57px;
+z-index: 999999;
+border-radius: 10px;
+box-shadow: 0px 5px 0px white;
+border: 2px solid black;
+}
+#upload:hover{
+  background-color: gray;
+  color: white;
+}
+  
+  
+    .imgcolor {
+  background-color: lightyellow;
+  padding: 3px;
+  border-radius: 10px;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+  .product-card1 {
+  background-color: lightgray;
+  border-radius: 0px 0px 10px 10px;
+  
+  width: 346px;
+height:200px;
+  text-align: center;
+  padding:7px;
+  
+}
+.product1{
+  background-color: white;
+  height: 586px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px black;
+  border:2px solid black;
+  
+}  
+.product-card {
+  background-color: lightgray;
+  border-radius: 0px 0px 10px 10px;
+  width: 346px;
+height:160px;
+  text-align: center;
+  padding:7px;
+  
+}
+.product{
+  background-color: yellow;
+  height: 546px;
+  border:2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  
+}
+.product-card1 h3 {
+  margin-bottom: 0px;
+  color: #0d2c55;
+}
+.product-card1 p {
+  margin: 5px 0;
+  font-size: 20px;
+  color:green;
+}
+
+
+.product-card h3 {
+  margin-bottom: 10px;
+  color: #0d2c55;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 20px;
+  color:green;
+}
+
+.buy-btn {
+  padding: 9px 22px;
+  background-color: #00b4c9;
+  color: white;
+  border: 2px solid blue;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: darkgreen;
+}
+
+.buy-btn:active {
+  background-color: yellow;
+  color: red;
+}
+
+
+
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.size-options input[type="radio"] {
+  display: none;
+}
+
+.size-options .circle {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 50%;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+}
+
+.size-options input[type="radio"]:checked + .circle {
+  background-color: green;
+  color: white;
+  border: 2px solid black;
+  
+}
+.ab{
+  background-color:red;
+  height:368px;
+  width:360px;
+display:inline-block;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius:8px 8px 0px 0px;
+      border-bottom:4px solid black;
+
+}
+  
+#ab1, #ab2, #ab3, #ab4, #ab5, #ab6, #ab7, #ab8{
+  width:360px;
+  height:368px;
+        border-radius:8px 8px 0px 0px;
+}
+
+
+
+
+
+
+/* Simple popup */
+#photoFrameMsg {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+#photoFrameMsg .box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  font-family: sans-serif;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+#photoFrameMsg h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0d2c55;
+}
+#photoFrameMsg button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #0d2c55;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#photoFrameMsg button:hover {
+  background: darkgreen;
+}
+
+
+/* Simple popup */
+#photoFrameMsg1 {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+#photoFrameMsg1 .box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  font-family: sans-serif;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+#photoFrameMsg1 h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0d2c55;
+}
+#photoFrameMsg1 button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #0d2c55;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#photoFrameMsg1 button:hover {
+  background: darkgreen;
+}
+
+
+
+
+.img-box {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; 
+  border-radius: 10px; 
+  z-index: 0;
+}
+
+.img-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  margin-bottom:10px;
+}
+.container11 {
+  display: flex;
+  justify-content: space-between;  /* left text - right button */
+  align-items: center;
+  flex-wrap: nowrap;   /* दूसरी लाइन में नहीं जाएगा */
+  background-color: #fcf05cfe;
+  color: #140985fe;
+  padding: 0 10px;
+  height: 40px;
+  font-size: clamp(12px, 3vw, 16px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.welcome-text {
+  flex: 1;
+  text-align: center;   /* बीच में text */
+  white-space: nowrap;  /* text टूटे नहीं */
+}
+
+#help {
+  padding: 5px 12px;
+  background-color: black;
+  color: white;
+  border-left: 2px solid white;
+  font-size: clamp(14px, 4vw, 18px);
+  border-radius: 4px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#help:hover {
+  background-color: gray;
+  border-left: 2px solid black;
+}
+#help:active {
+  color: red;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .container11 {
+    font-size: 14px;
+    height: auto;
+    padding: 6px;
+  }
+
+}
+  </style>
+</head>
+<body>
+    <div class="container11"><b>WELCOME TO S.K. PRINTING & GIFTS
+    <a href="Help.html">
+    <div id="help">Help</div></a>
+    </div>
+    </b>
+  <div class="container1">
+    <div class="img-box">
+    
+    <img src="logo.png" width="370px" height="330px" >
+    </div>
+
+  
+  <div class="back">
+    <span class="c"><b>Gift Gallery</b></span></div>
+<span style="
+  display: inline-block;
+  font-family: 'Pacifico', cursive ;
+  font-size: 18px;
+  font-weight: normal;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 1px;
+">
+  Every Print Speaks Your Love Story…
+</span>
+  </div>
+<div class="scroll"><b><marquee direction="up" scrollamount="2">Saurabh T-Shirt Printing & Gift Gallery</marquee></b></div>
+
+
+  <div class="container" id="slider">
+    <div class="child">
+<img src="img2.png" style="height: 500px; width: 100%; ">
+      </div>
+    <div class="child">
+      <img src="img1.png" height="500px" width="100%">
+      </div>
+    <div class="child">
+            <img src="img3.png" height="500px" width="100%">
+    </div>
+    <div class="child">
+       <img src="img4.png" height="500px" width="100%">
+    </div>
+    <div class="child">
+        <img src="Img5.jpg" height="500px" width="100%">
+    </div>
+  </div>
+
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+     <span class="dot"></span>
+  </div>
+  
+  <div class="menu">
+<ul>
+  <b> 
+  <li>Home</li>
+      <a href="About us1.html" style="text-decoration:none; color:white;"><li>About us</li></a> 
+      <a href="Contact us1.html" style="text-decoration:none; color:white;"><li>Contact us</li></a>
+   <a href="My Order.html" style="text-decoration:none; color:white;"><li>My Order</li></a>
+   
+          </b>      
+  </ul>
+<a href="Choose your photo.html" style="text-decoration:none; color:black;">  <div id="upload"><b>Customize Your Product</b>
+  </div></a>
+  </div>
+  <div class="imgcolor">
+    
+
+  <div class="product1">
+    <a href="productPage1.html">
+    <div class="ab">
+  <img src="Pic10.jpg" id="ab1" alt="Custom T-Shirt" >          
+    </div>
+    </a>
+    
+      <div class="product-card1">
+
+    <h3>🧥 Product: Custom T-Shirt</h3>
+    <p> Size: 
+  
+  <div class="size-options">
+  <label>
+    <input type="radio" name="size" value="6-8" checked id="a">
+    <span class="circle" >6-8</span>
+  </label>
+  <label>
+    <input type="radio" name="size" value="9-11" id="b">
+    <span class="circle">9-11</span>
+  </label>
+  <label>
+   <input type="radio" name="size" value="S" id="c">
+    <span class="circle">S</span>
+  </label>
+    <label>
+   <input type="radio" name="size" value="M" id="d">
+    <span class="circle">M</span>
+  </label>
+    <label>
+   <input type="radio" name="size" value="L" id="e">
+    <span class="circle">L</span>
+  </label>
+      <label>
+   <input type="radio" name="size" value="free" id="f">
+    <span class="circle">Free</span>
+  </label>
+
+</div>
+    
+    </p>
+    <p> Price: ₹<span id="price1">199</span></p>
+      Free Delivery 
+    <button class="buy-btn" onclick="buyNow('t-shirt', '199','Pic10.jpg', event)">Buy Now</button>
+    </div>
+  
+  </div>
+<div class="product">
+  <a href="productPage2.html">
+      <div class="ab">
+  <img src="Pic11.png" id="ab2" alt="Magic Mug">          
+            </div>
+  </a>
+  <div class="product-card">
+    <h3>☕ Product: Magic Mug</h3>
+    <p>Size: Standard</p>
+    <p> Price: ₹249</p>
+      Free Delivery 
+    <button class="buy-btn" onclick="buyNow('Magic Mug', '249','Pic11.png', event)">Buy Now</button>
+  </div>
+  </div>
+
+<div class="product">
+  <a href="productPage3.html">
+   <div class="ab">
+  <img src="Pic12.png" id="ab3" alt="Mug / cup">          
+            </div>
+  </a>
+  <div class="product-card">
+    <h3>☕ Product: Mug</h3>
+    <p> Size: Standard</p>
+    <p> Price: ₹199</p>
+      Free Delivery 
+    <button class="buy-btn" onclick="buyNow(' Mug', '199',  'Pic12.png', event)">Buy Now</button>
+  </div>
+  </div>
+
+<div class="product">
+  <a href="productPage4.html">
+     <div class="ab" >
+  <img src="Pic4.jpg" id="ab4" alt="Heart Shape Pellow">          
+            </div>
+  </a>
+  <div class="product-card">
+    <h3>💝  Product: Heart Shape Pillow</h3>
+    <p> Size: Standard</p>
+    <p> Price: ₹299</p>
+      Free Delivery 
+      <button class="buy-btn" onclick="buyNow(' Pillow ', '299',  'Pic4.jpg', event)">Buy Now</button>
+  </div>
+  </div>
+
+
+
+<div class="product">
+  <a href="productPage7.html">
+         <div class="ab">
+  <img src="Pic17.jpg" id="ab8" alt="Cap">          
+            </div>
+</a>
+  <div class="product-card">
+    <h3>🧢 Product: Cap</h3>
+    <p> Size: Adjustable</p>
+    <p> Price: ₹149</p>
+  Free Delivery 
+    <button class="buy-btn" onclick="buyNow(' Cap', '149',  'Pic17.jpg', event)">Buy Now</button>
+  </div>
+  </div>
+
+
+  
+<div class="product1">
+  
+             <div class="ab">
+  <img src="Pic22.jpg" id="ab5" alt="Phtot Frame">          
+            </div>
+  
+  <div class="product-card1">
+    <h3>🖼️ Product: Photo Frame</h3>
+    <p> Size: 
+
+  <div class="size-options">
+  <label>
+    <input type="radio" name="size" value="4×6" checked>
+    <span class="circle">4×6</span>
+  </label>
+  <label>
+    <input type="radio" name="size" value="5×7">
+    <span class="circle">5×7</span>
+  </label>
+  <label>
+   <input type="radio" name="size" value="8×10">
+    <span class="circle">8×10</span>
+  </label>
+    <label>
+   <input type="radio" name="size" value="8.5×11">
+    <span class="circle">9×11</span>
+  </label>
+      <label>
+   <input type="radio" name="size" value="12×18">
+    <span class="circle">12×18</span>
+  </label>
+        <label>
+   <input type="radio" name="size" value="16×20">
+    <span class="circle">16×20</span>
+  </label>
+</div>
+    
+    </p>
+    <p> Price: ₹<span id="price2">449</span></p>
+    <p>  Free Delivery 
+    <a href="Choose your photo.html">
+    <button class="buy-btn">Buy Now</button></a></p>
+  </div>
+  </div>
+
+<div class="product">
+
+       <div class="ab">
+    <img src="Pic36.png" id="ab6" alt="Keychain">          
+            </div>
+  
+  <div class="product-card">
+    <h3>🔑 Product: Keychain</h3>
+    <p> Size: Small</p>
+    <p> Price: ₹119</p>
+      Free Delivery 
+          <a href="Choose your photo.html">
+    <button class="buy-btn">Buy Now</button>
+    </a>
+  </div>
+  </div>
+
+
+  </div>
+  
+  
+  
+  
+  <div class="instructions">
+  <h3>👕 अपना डिज़ाइन अपलोड करें और प्रीव्यू देखें 🎁</h3>
+  <p>1️⃣ ऊपर दिए गए "Choose Your Design” बटन पर क्लिक करें।<br>
+     2️⃣ अपनी टी-शर्ट या मग का डिज़ाइन चुनें।<br>
+     3️⃣ हम उसे प्रिंट करके आपके पास भेजेंगे।</p>
+
+  <h3>📦 हम किन चीजों पर प्रिंट करते हैं?</h3>
+<p>👕 T-Shirts | ☕ Coffee Mugs |  Magic Cup <br><br>🔑keychains  | 🖼️ Photo Frames <br><br> 🧢Cap | Pillow</p>
+
+  <h3>💡 एक शानदार डिज़ाइन चुनने की टिप्स:</h3>
+  <p>🎨 हाई-क्वालिटी फोटो अपलोड करें<br>
+     🖌️ टेक्स्ट साफ और बड़ा रखें<br>
+     🌈 ब्राइट कलर डिज़ाइन ज़्यादा अच्छा दिखता है</p>
+
+
+  <h3>❤️ कोई भी चीज़ यादगार बन सकती है...</h3>
+  <p>🎁 एक टी-शर्ट या मग सिर्फ सामान नहीं होता,<br>
+     वो किसी की मुस्कान, एक याद, या आपका प्यार हो सकता है।<br>
+     🥹 तो बस एक डिज़ाइन भेजिए... और हम आपकी भावनाओं को प्रिंट कर देंगे।</p>
+
+
+  <h3>💝 अपनों के लिए कुछ खास कीजिए...</h3>
+  <p>👩‍❤️‍👨 क्या किसी को गिफ्ट देना है?<br>
+     🧒 क्या बच्चे की बर्थडे है?<br>
+     👵 या मम्मी-पापा को सरप्राइज़ देना है?<br><br>
+     ✨ अपने दिल से डिज़ाइन बनाइए और हम उसे सुंदर गिफ्ट में बदल देंगे!</p>
+
+<p style="text-align:center; font-size: 18px; color:#0d2c55; margin-top: 5px;">
+✨ बस ऑर्डर करे या  एक डिज़ाइन भेजो, बाकी का जादू हम करेंगे! ✨
+
+
+<br><br>
+    
+    <b><span class="a">S. K. T-Shirt Printing</span>
+  
+  
+
+
+
+
+
+<div id="photoFrameMsg">
+  <div class="box">
+    <h3>Photo Frame केवल Customize किया जा सकता है</h3>
+    <p>Buy Now पर क्लिक करके आप इसे customize कर सकते हैं।</p>
+    <button id="pfBackBtn">Back</button>
+  </div>
+</div>
+
+<div id="photoFrameMsg1">
+  <div class="box">
+    <h3>keychains केवल Customize किया जा सकता है</h3>
+    <p>Buy Now पर क्लिक करके आप इसे customize कर सकते हैं।</p>
+    <button id="pfBackBtn1">Back</button>
+  </div>
+</div>
+</p>
+</div>
+  <script>
+    var slider = document.getElementById("slider");
+    var dots = document.querySelectorAll(".dot");
+    var index = 0;
+
+    setInterval(function () {
+      index = (index + 1) % dots.length;
+
+      slider.scrollTo({
+        left: index * slider.clientWidth,
+        behavior: "smooth"
+      });
+
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      dots[index].classList.add("active");
+    }, 3500);
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  function buyNow(name, price, img, event) {
+    // सिर्फ product details pass करना है
+    localStorage.setItem("productName", name);
+    localStorage.setItem("productPrice", price);
+    localStorage.setItem("productImage", img);
+
+    // Buy-now page खोलना है (नया tab)
+    window.open('Buy-now.html', '_blank');  
+  }
+  
+  
+  
+  var pfImg = document.getElementById("ab5"); // photo frame image
+var pfMsg = document.getElementById("photoFrameMsg");
+var pfBack = document.getElementById("pfBackBtn");
+
+// img पर क्लिक करने से message दिखे
+pfImg.addEventListener("click", function(e){
+  e.preventDefault();
+  pfMsg.style.display = "flex";
+});
+
+// back पर क्लिक करने से message हटे
+pfBack.addEventListener("click", function(){
+  pfMsg.style.display = "none";
+});
+
+
+
+var keyMess = document.getElementById("photoFrameMsg1");
+var keyImg = document.getElementById("ab6");
+var keyBtn = document.getElementById("pfBackBtn1");
+keyImg.addEventListener("click", function(e){
+  e.preventDefault();
+  keyMess.style.display = "flex";
+});
+keyBtn.addEventListener("click", function(){
+  keyMess.style.display = "none";
+});
+
+</script>
+
+</body>
+</html>
+  
+
+
+  
