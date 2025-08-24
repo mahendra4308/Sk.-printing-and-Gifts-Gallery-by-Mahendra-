@@ -1,0 +1,655 @@
+<html>
+  <head><title>Choose your photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 5px;
+  box-shadow: 0px 0px 10px black;
+  background-color: pink;
+  position: sticky;
+  top: 6px;
+}
+
+ul li {
+  list-style: none;
+padding: 7px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  margin: 2px;
+  display:inline-block;
+  height:25px;
+  line-height: 25px;
+}
+    li:hover{
+     background-color: lightgray; 
+     color:black;
+      border: 2px solid black;
+      padding: 7px;
+      transition:0.3s;
+    }
+    li:active{
+      color: red;
+      background-color: yellow;
+    }
+    .menu{
+      background-color: white;
+      height: auto;
+      width: auto;
+      position: sticky;
+      top: 0;
+      z-index: 99999;
+    }
+ 
+  .a1{
+  background-color: red;
+  color: yellow;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+
+  
+  .choose-photo-section {
+  background-color: #fff8f0;
+  border: 2px dashed #ff9800;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  
+}
+
+.choose-photo-section h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 43px;
+  color: #ff5722;
+  text-align: center;
+}
+
+.choose-photo-section p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.photo-upload-form input[type="file"] {
+  padding: 10px;
+  margin:5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 17px;
+  background-color: lightyellow;
+  text-align: center;
+}
+.photo-upload-form input[type="file"]:active {
+  background-color: lightgray;
+  
+  
+}
+#photo {
+  height: 400px;
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: pink;
+  resize: both;
+}
+#photo::-webkit-scrollbar {
+  height: 7px;
+}
+#photo::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 10px;
+}
+.p2 {
+  color: blue;
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color:#e1edcb ;
+  text-align: center;
+  border-radius: 4px;
+box-shadow: 0px 0px 5px black;
+margin: 15px;
+
+}
+
+.photo-upload-form button {
+  margin-top: 15px;
+  padding: 15px 25px;
+  background-color: pink;
+  box-shadow: 0px 0px 5px ;
+  color: black;
+  border: none;
+  border-radius: 10px 80px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+.photo-upload-form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.select{
+  font-size: 23px;
+  padding: 15px;
+}
+#select{
+  font-size: 25px;
+  margin-left: 40px;
+  margin-top: 5px;
+  width: 280px;
+  padding: 5px;
+  border-radius: 10px;
+}
+#select:active{
+  background-color: lightyellow;
+}
+#select1{
+  color: green;
+}
+.name{
+  font-size: 22px;
+  width: 290px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-family: Sans-Serif;
+  
+}
+input{
+  border: 2px solid pink;
+  background-color: #faefef;
+  
+  height: 60px;
+
+}
+
+
+
+
+#name:hover{
+  background-color: lightyellow;
+}
+ #select2, #select3, #name0{
+  background-color: lightgray;
+  border: 2px solid gray;
+  color: purple;
+  
+}
+.p1{
+  box-shadow: 0px 0px 10px black;
+  margin: 5px;
+  border-radius: 10px;
+  color: black;
+}
+#name0 input{
+  color: purple;
+}
+#name0:active{
+  color: red;
+}
+.qty-container {
+  display: flex ;
+  align-items: center;
+  
+  gap: 5px;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  background-color: #faefef;
+  border-radius: 10px 10px 0px 0px;
+  border: 2px solid pink;
+  width: 90%;
+  border-bottom: none;
+  margin-left: 13px;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+}
+
+.qty-container button {
+  padding: 8px 13px;
+  font-size: 22px;
+  border-radius: 8px;
+  background-color: lightgreen;
+  border: 1px solid green;
+  cursor: pointer;
+}
+
+#product-quantity {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: purple;
+  padding: 0 2px;
+  
+  border: none;
+  background: transparent;
+}
+
+.qty-label {
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #444;
+}
+#q1, #q{
+  margin: 15px;
+  
+}
+.pr{
+  display: inline-block;
+  padding: 15px;
+  background-color: #faefef;
+  border-radius: 0px 0px 8px 8px ;
+  width: 84.6%;
+  font-size: 25;
+  border: 2px solid pink;
+  margin-left: 13px;
+  color: green;
+  
+}
+#Price, #Price2{
+  display: inline-block;
+  color: red;
+  
+}
+
+h4{
+  color:black;
+}
+label{
+  color: #000da5;
+}
+  </style>
+  </head>
+  <body>
+    
+    <div class="menu">
+<ul>
+  <b> 
+  <li><a href="index.html" style="text-decoration:none; color:white;">Home</a></li>
+      <li><a href="About us1.html" style="text-decoration:none; color:white;">About us</a> </li>
+          <li><a href="Contact us1.html" style="text-decoration:none; color:white;">Contact us</a></li>
+              <li><a href="My Order.html" style="text-decoration:none; color:white;">My Order</a></li>
+          </b>      
+  </ul>
+  </div>
+    
+    <div class="a1"><b>S. K. T-Shirt Printing & Gift Gallery</b></div>
+      
+    
+  
+<div class="choose-photo-section">
+  <h2>📷 Choose Your Photo</h2>
+  <p>यहाँ आप अपनी पसंदीदा फ़ोटो अपलोड करें, जिसे हम आपकी टी-शर्ट, मग या गिफ्ट पर प्रिंट कर सकें।</p>
+
+  <form  class="photo-upload-form" onsubmit=" return  order()">
+    <input type="file" accept="image/*" id="File" multiple >
+    <br><br>
+    <div class="p2"><b>Photo Preview 👇</b></div>
+<div id="photo"> Your Photo Preview ➡</div>
+    
+<div class="name">
+  <b>Extra Instructions👇</b>
+  <textarea rows="4" cols="40" id="extra" class="name" placeholder="Any message, instruction or gift wrap request..."></textarea>
+</div><br>
+    <div class="p1">
+    <div class="name">
+   <b> Choose Your Product  👇</b>
+   <select id="select1" class="name" onchange="check(); a(); ">
+  <option >none </option>
+      <option>T-Shirt </option>
+          <option>Mug </option>
+     <option>Magic mug</option>
+       <option>Pillow </option>
+   <option>Keychain </option>
+ <option>Photo Frames </option>
+        <option>Cap </option>
+ 
+      </select>
+      </div>
+      
+                  <div class="name">
+     <b>T-Shirt Size👇</b>
+          <select id="select2" class="name" disabled="">
+  <option class="option">none </option>
+      <option>6-8 Age</option>
+          <option>9-11 Age</option>
+                <option>S</option>
+                <option>M</option>
+               <option>L</option>
+            <option>Free size</option>
+      </select>
+      </div>
+      
+      
+                        <div class="name">
+     <b>Photo Frames size👇</b>
+     
+     
+  <select id="select3" class="name" disabled>
+  <option class="option">none </option>
+      <option>4×6</option>
+          <option>5×7 </option>
+                <option>8×10</option>
+                <option>9×11 </option>
+               <option>12×18 </option>
+            <option>16×20</option>
+      </select>
+      </div>
+    
+      </div>
+      
+      
+        
+        
+<div class="qty-container">
+  <label class="qty-label">Quantity:</label>
+  <button type="button" id="q1">-</button>
+  <div id="product-quantity">1</div>
+  <button type="button" id="q">+</button></div>
+  <div class="pr">
+    
+    
+    <h4>प्रिंट कहाँ चाहिए ?<br>
+    Only T-Shirt and Keychain  </h4>
+<label><input type="checkbox" onchange="a()" name="print_side" value="front">[ Front ] फ्रंट साइड</label><br><br>
+<label><input type="checkbox" onchange="a()" name="print_side" value="back">[ Back ] बैक साइड</label>
+<hr>
+
+    
+    Price: ₹<div id="Price">00</div><br><br>
+    Total Price: ₹<div id="Price2">00</div>
+  </div>
+
+
+      
+      <div class="name">
+     <b> Name :</b>
+      <input type="text" placeholder="Enter Your Name" id="name1" class="name">
+      </div><br>
+      
+            <div class="name">
+     <b>Mo. Number :</b>
+      <input type="tel" placeholder="Enter Your Mo. Number" id="Number" class="name" maxlength="10" pattern="[0-9]{10}" title="Please enter exactly 10 digits" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+      </div><br>
+                  <div class="name">
+     <b>State :</b>
+      <input type="text" placeholder="Enter Your State" id="State" class="name">
+      </div><br>
+      
+            <div class="name">
+     <b>District :</b>
+      <input type="text" placeholder="Enter Your District" id="District" class="name">
+      </div><br>
+      
+             <div class="name">
+     <b>Post :</b>
+      <input type="text" placeholder="Enter Your Post" id="Post" class="name">
+      </div><br>
+      
+                  <div class="name">
+     <b>Pin Code :</b>
+      <input type="tel" placeholder="Enter Your Pin Code" id="Pin" class="name"
+      maxlength="6" pattern="[0-9]{6}" title="Please enter exactly 6 digits your pin code" oninput="this.value=this.value.replace(/[^0-9]/g, '');">
+      </div><br>
+      
+             <div class="name">
+     <b>House Number :</b>
+      <input type="text" placeholder="Enter Your House Number" id="House" class="name">
+      </div><br>
+      
+    
+  <button type="submit"><b>Upload Photo</b></button>
+  </form>
+</div>
+<script>
+
+function order(){
+  var a = document.getElementById("name1").value;
+  var b = document.getElementById("Number").value;
+  var c = document.getElementById("State").value;
+  var d = document.getElementById("District").value;
+  var e = document.getElementById("Post").value;
+  var f = document.getElementById("Pin").value;
+  var g = document.getElementById("House").value;
+  var h = document.getElementById("File").files;
+  var i = document.getElementById("select1").value.toLowerCase();
+  
+  var k = document.getElementById("select2").value.toLowerCase(); 
+  var l = document.getElementById("select3").value.toLowerCase(); 
+
+  if (a === "" || b === "" || c === "" || d === "" || e === "" || f === "" || g === "" || h.length === 0 || i === "none") {
+    alert("Your data is required ❌❌");
+    return false;
+  }
+  if (!/^\d{10}$/.test(b)) {
+  alert("Please enter a valid 10-digit mobile number");
+  return false;
+}
+if(!/^\d{6}$/.test(f)){
+  alert("Please enter a valid 6-digit Pin Code ");
+  return false;
+  
+}
+
+  if(i === "t-shirt" && k === "none") {
+    alert("Please choose your T-Shirt size");
+    return false;
+  }
+
+  if(i === "photo frames" && l === "none") {
+    alert("Please choose your Photo Frames size");
+    return false;
+  }
+
+
+
+  alert("Thanks, your order successfully submitted 😀😀✅ ");
+
+
+
+
+
+
+
+
+
+
+setTimeout(() => {
+  document.querySelector('.photo-upload-form').reset();
+  qty = 1;
+  qtyDisplay.textContent = qty;
+  document.getElementById("Price").innerText = "00";
+  document.getElementById("Price2").innerText = "00";
+  document.getElementById("photo").innerHTML = "Your Photo Preview ➡";
+  document.getElementById("select1").disabled = true;
+  document.getElementById("select2").disabled = true;
+
+  
+}, 500);
+
+return false;
+
+
+}
+
+
+document.getElementById("File").addEventListener("change", function(event) {
+  const files = event.target.files;
+  const photoDiv = document.getElementById("photo");
+  photoDiv.innerHTML = ""; 
+
+  if (files.length === 0) {
+    photoDiv.innerHTML = "<p>No photo selected</p>";
+    return;
+  }
+
+  for (var i = 0; i < files.length; i++) {
+    const file = files[i];
+    const reader = new FileReader();
+
+
+
+
+reader.onload = function(e) {
+  const img = document.createElement("img");
+  img.src = e.target.result;
+  img.style.width = "auto";
+  img.style.height = "370";
+  img.style.marginRight = "10px";
+  img.style.borderRadius = "10px";
+  img.style.border = "2px solid black";
+  img.style.display = "inline-block";
+  img.style.objectFit = "contain";  
+  photoDiv.appendChild(img);
+};
+
+
+
+
+    reader.readAsDataURL(file);
+  }
+});
+
+function check(){
+  var ab1 = document.getElementById("select1").value.toLowerCase(); 
+  var ab2 = document.getElementById("select2");
+  var ab3 = document.getElementById("select3");
+
+  ab2.disabled = true;
+  ab3.disabled = true;
+
+  if(ab1 === "t-shirt"){
+    ab2.disabled = false;
+  }
+  else if (ab1 === "photo frames"){
+    ab3.disabled = false;
+  }
+}
+
+
+
+var qty = 1;
+const qtyDisplay = document.getElementById("product-quantity");
+const btnPlus = document.getElementById("q");
+const btnMinus = document.getElementById("q1");
+
+btnPlus.addEventListener("click", () => {
+  qty++;
+  qtyDisplay.textContent = qty;
+  
+  document.getElementById("Price2").innerText=price*qty;
+});
+
+btnMinus.addEventListener("click", () => {
+  if (qty > 1) {
+    qty--;
+    qtyDisplay.textContent = qty;
+    
+     document.getElementById("Price2").innerText=price*qty;
+  }
+});
+
+let price =0;
+function a(){
+  
+ 
+
+
+  var ab1 = document.getElementById("select1").value.toLowerCase();
+  var ab2 = document.getElementById("select2");
+  var ab3 = document.getElementById("select3");
+
+  ab2.disabled = true;
+  ab3.disabled = true;
+
+  switch (ab1) {
+    case "t-shirt":
+      ab2.disabled = false;
+  
+      price =199;
+      break;
+    case "mug":
+      price = 199;
+      break;
+    case "magic mug":
+      price = 249;
+      break;
+    case "pillow":
+      price = 299;
+      break;
+    case "keychain":
+      
+      price = 119;
+      break;
+    case "photo frames":
+      ab3.disabled = false;
+      price = 449;
+      break;
+    case "cap":
+      price = 149;
+      break;
+    default:
+      price = 0;
+  }
+
+  var frontChecked = document.querySelector('input[value="front"]').checked;
+  var backChecked = document.querySelector('input[value="back"]').checked;
+
+  let extraCharge = 0;
+  if (frontChecked && backChecked) {
+    if (ab1 === "t-shirt") {
+      extraCharge = 100;
+    } else if (ab1 === "keychain") {
+      extraCharge = 50;
+    }
+  }
+
+  const finalPrice = price + extraCharge;
+  document.getElementById("Price").innerText = finalPrice;
+  document.getElementById("Price2").innerText = finalPrice * qty;
+
+
+
+
+
+
+}
+
+
+
+
+
+</script>
+
+    </body>
+  </html>
