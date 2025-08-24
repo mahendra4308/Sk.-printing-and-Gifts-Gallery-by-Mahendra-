@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Center - S.K. Printing & Gifts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    
+      ul {
+  background-color: pink;
+  display: flex;      
+  justify-content: center;     
+  align-items: center;        
+  flex-wrap: wrap;             
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px black;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  
+}
+
+ul li {
+  list-style: none;
+  background-color: black;
+  color: white;
+  padding: 8px ;
+  font-size: 16px;
+  border-radius: 10px;
+
+  display: inline-block;
+}
+ul li:active{
+  background-color: yellow;
+  color:red;
+  transition: 0.5;
+}
+li:hover{
+  background-color: lightgray;
+  color: black;
+  border:2px solid black;
+}
+#upload{
+  text-align: center;
+  background-color: #58fdf5 ;
+  font-size: 28px;
+  margin-block: 5px;
+  padding: 5px;
+  position: sticky;
+  top: 57px;
+z-index: 999999;
+border-radius: 10px;
+box-shadow: 0px 5px 0px white;
+border: 2px solid black;
+}
+    
+    
+
+    .help-center {
+      max-width: 800px;
+      
+      padding: 10px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .help-center h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: blue;
+      font-size: 35px;
+    }
+
+    .faq {
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq button {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .faq button:after {
+      content: '+';
+      float: right;
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .faq.active button:after {
+      content: '-';
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      padding: 0 15px;
+      color: #444;
+    }
+
+    .faq-content p {
+      margin: 10px 0;
+    }
+    
+    
+    
+    
+    
+/* Section wrapper */
+.customise-help {
+  max-width: 880px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header */
+.help-header {
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: #fff;
+  padding: 28px 30px;
+}
+.help-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+.help-header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+
+/* Content */
+.help-content {
+  padding: 26px 30px;
+  color: #2a2a2a;
+}
+
+.help-section {
+  margin-bottom: 22px;
+}
+
+.help-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-left: 4px solid #0077ff;
+  padding-left: 10px;
+  color: #1a1a1a;
+}
+
+.help-section ul {
+  padding-left: 20px;
+  z-index: 0;
+}
+.help-section ul li {
+  margin: 6px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Steps */
+.steps {
+  counter-reset: stepcount;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.steps li {
+  position: relative;
+  padding: 16px 16px 16px 56px;
+  background: #f9fbff;
+  border: 1px solid #e3ebff;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.steps li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+.steps li::before {
+  counter-increment: stepcount;
+  content: counter(stepcount);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0077ff;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Info boxes */
+.tip, .warn {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 14px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.tip {
+  background: #e9f6ff;
+  border-left: 4px solid #0077ff;
+}
+.warn {
+  background: #fff4f4;
+  border-left: 4px solid #ff4444;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .customise-help {
+    margin: 15px;
+  }
+  .help-header {
+    padding: 20px;
+  }
+  .help-header h2 { font-size: 22px; }
+  .help-content { padding: 18px; }
+  .steps li { padding-left: 50px; }
+}
+
+  </style>
+</head>
+<body>
+  
+  
+               <ul><b> 
+  <li> <a href="index.html " style="text-decoration: none; color: white;">Home</a></li>
+      <li><a href="About us1.html" style="text-decoration:none; color:white;">About us </a></li>
+          <li><a href="Contact us1.html" style="text-decoration:none; color:white;">Contact us </a></li>
+          <a href="My order.html">    <li>My Order</li></a>
+  </ul></b>
+  
+  <div id="upload"><b>
+        <a href="Choose your photo.html" style="text-decoration:none; color:black;">Customize Your Product</a></b>
+  </div>
+  <div class="help-center">
+    <h2> Help Center (FAQ)</h2>
+<hr>
+    <div class="faq">
+      <button>मैं ऑर्डर कैसे कर सकता हूँ?</button>
+      <div class="faq-content">
+        <p>आप हमारी वेबसाइट से सीधे प्रोडक्ट चुनकर "Order Now" बटन पर क्लिक करके आसानी से ऑर्डर कर सकते हैं।</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button>क्या मैं अपना फोटो और टेक्स्ट डाल सकता हूँ?</button>
+      <div class="faq-content">
+        <p>हाँ ✅ आप अपने प्रोडक्ट को पूरी तरह से कस्टमाइज कर सकते हैं - फोटो, नाम, मैसेज सब जोड़ सकते हैं।</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button>पेमेंट कैसे करना होगा?</button>
+      <div class="faq-content">
+        <p>हम UPI, Google Pay, PhonePe, Debit/Credit Card और Cash on Delivery सपोर्ट करते हैं।</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button>डिलीवरी में कितना समय लगेगा?</button>
+      <div class="faq-content">
+        <p>आम तौर पर आपके प्रोडक्ट की डिलीवरी 4-7 कार्यदिवस में हो जाती है।</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button>अगर प्रोडक्ट खराब निकल जाए तो?</button>
+      <div class="faq-content">
+        <p>अगर प्रोडक्ट डैमेज्ड या गलत डिलीवर हुआ है तो आप 3 दिन के अंदर रिप्लेसमेंट की रिक्वेस्ट कर सकते हैं।</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button>कस्टमर सपोर्ट से कैसे संपर्क करें?</button>
+      <div class="faq-content">
+        <p>आप हमें WhatsApp, Call या Email के ज़रिए सीधे संपर्क कर सकते हैं। (📞 9838881619)</p>
+      </div>
+    </div>
+    <Span style="color:blue;">
+    Mo.Number: 9838881619 , 9198127065<br><br>
+    Email: mahendra143mk2@gmail.com
+    </span>
+    
+    
+    
+    
+  </div>
+
+
+
+<section class="customise-help">
+  <div class="help-header">
+    <h2>🛠️ अपना Order Customize कैसे करें?</h2>
+    <p>यहाँ से जानें कि कैसे आप T-Shirt, Mug, Photo Frame पर अपना नाम, फोटो या लोगो जोड़ सकते हैं।</p>
+  </div>
+
+  <div class="help-content">
+
+    <div class="help-section">
+      <h3>आप क्या-क्या कस्टमाइज़ कर सकते हैं?</h3>
+      <ul>
+        <li><b>T-Shirt:</b> Front/Back प्रिंट, Text Font/Size/Color, Photo/Logo placement</li>
+        <li><b>Mug:</b> Single/Wrap प्रिंट, फोटो + टेक्स्ट, हैंडल साइड चयन</li>
+        <li><b>Photo Frame:</b> फोटो, कैप्शन/क्वोट, बैकग्राउंड</li>
+      </ul>
+    </div>
+
+    <div class="help-section">
+      <h3>Step-by-Step Process</h3>
+      <ol class="steps">
+        <li>
+          <span class="step-title">Product चुनें</span>
+          <p>Products पेज मे     <em>Customize</em> Option दबाएँ।</p>
+        </li>
+        <li>
+          <span class="step-title">Design Options सेट करें</span>
+          <p>Size/Color चुनें और Print Area सेलेक्ट करें।</p>
+        </li>
+        <li>
+          <span class="step-title">Photo/Logo अपलोड करें</span>
+          <p>JPG, PNG, SVG फॉर्मैट अपलोड करें (2000px या उससे ज्यादा बेहतर)।</p>
+        </li>
+        <li>
+          <span class="step-title">Text जोड़ें</span>
+          <p>Font/Size/Color चुनें और Text को ड्रैग-ड्रॉप से जगह सेट करें।</p>
+        </li>
+        <li>
+          <span class="step-title">Live Preview देखें</span>
+          <p>Preview में design की placement और रंग चेक करें।</p>
+        </li>
+        <li>
+          <span class="step-title">Notes/Instructions लिखें</span>
+          <p>जैसे “Logo छोटा दाएँ ऊपर”, “Back पर text चाहिए” आदि।</p>
+        </li>
+        <li>
+          <span class="step-title">Add to Cart / Order Now</span>
+          <p>Quantity चुनकर Order पूरा करें।</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="tip">💡 <b>Pro Tip:</b> मोबाइल से फोटो अपलोड कर रहे हैं तो clear subject रखें।</div>
+
+    <div class="help-section">
+      <h3>फाइल Guidelines</h3>
+      <ul>
+        <li>Minimum 2000×2000 px</li>
+        <li>Logo/Graphics के लिए PNG (Transparent) या SVG</li>
+        <li>Blur फोटो से प्रिंट भी blur आएगा</li>
+        <li>Screen vs Print में हल्का color फर्क हो सकता है</li>
+      </ul>
+    </div>
+
+    <div class="warn">⚠️ <b>ध्यान दें:</b> Copyrighted इमेज का इस्तेमाल न करें।</div>
+
+    <div class="help-section">
+      <h3>Order के बाद</h3>
+      <ul>
+        <li>आपका डिज़ाइन "My Orders" में सेव रहेगा।</li>
+        <li>जरूरत पड़ने पर हम WhatsApp/Call पर कन्फर्मेशन भेजेंगे।</li>
+        <li>Urgent Order के लिए Notes में लिखें।</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+  <script>
+    const faqs = document.querySelectorAll(".faq");
+
+    faqs.forEach(faq => {
+      faq.querySelector("button").addEventListener("click", () => {
+        faq.classList.toggle("active");
+        const content = faq.querySelector(".faq-content");
+        if (faq.classList.contains("active")) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          content.style.maxHeight = null;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
