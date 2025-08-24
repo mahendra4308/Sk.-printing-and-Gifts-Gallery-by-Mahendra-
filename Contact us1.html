@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head><title>Contact us </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+          ul {
+  background-color: pink;
+  display: flex;      
+  justify-content: center;     
+  align-items: center;        
+  flex-wrap: wrap;             
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px black;
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+  
+}
+
+ul li {
+  list-style: none;
+  background-color: black;
+  color: white;
+  padding: 8px ;
+  font-size: 16px;
+  border-radius: 10px;
+height: 25px;
+line-height: 25px;
+  display: inline-block;
+}
+ul li:active{
+  background-color: yellow;
+  color:red;
+  transition: 0.5;
+}
+li:hover{
+  background-color: lightgray;
+  color: black;
+  border:2px solid black;
+}
+
+
+/* छोटे स्क्रीन पर responsive font size */
+@media (max-width: 600px) {
+  ul li {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+#upload{
+  text-align: center;
+  background-color: #58fdf5 ;
+  font-size: 38px;
+  margin-block: 5px;
+  padding: 5px;
+  position: sticky;
+  top: 57px;
+z-index: 999999;
+border-radius: 10px;
+box-shadow: 0px 5px 0px white;
+border: 2px solid black;
+}
+#upload:hover{
+  background-color: gray;
+  color: white;
+}
+  
+    
+/* 🔹 Header Title */
+.a1 {
+  background-color: red;
+  color: yellow;
+  font-size: 26px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 15px;
+  height: auto;
+  line-height: normal;
+  font-family: 'Lobster', cursive;
+  margin: 10px auto;
+  max-width: 95%;
+}
+
+/* 🔹 Contact Container */
+.contact-container {
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 95%;
+  margin: 20px auto;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-container h2 {
+  color: #d6336c;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+/* 🔹 Links */
+.contact-container a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-word;
+}
+.contact-container a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹 Form Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #d6336c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #b82e5d;
+}
+
+/* 🔹 Message Box */
+.mess {
+  box-shadow: 0px 0px 10px gray;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* 🔹 Image Animation */
+.img:hover {
+  animation: img 3s linear 1;
+}
+@keyframes img {
+  0%   { width:70px; height:70px;}  
+  100% { width:230px; height:230px;}  
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  
+  #upload {
+    font-size: 30px;
+    padding: 8px;
+  }
+  .a1 {
+    font-size: 30px;
+    padding: 5px;
+  }
+  .contact-container h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #upload {
+    font-size: 27px;
+    padding: 3px;
+  }
+  .a1 {
+    font-size: 25px;
+    padding: 2px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .contact-container h2 {
+    font-size: 26px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .contact-form button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+  </style>
+    </head>
+    <body>
+       <ul><b> 
+  <li> <a href="index.html " style="text-decoration: none; color: white;">Home</a></li>
+      <li><a href="About us1.html" style="text-decoration:none; color:white;">About us </a></li>
+          <li>Contact us</li>
+              <li><a href="My Order.html" style="text-decoration:none; color:white;">My Order</a></li>
+  </ul></b>
+  
+  <div id="upload"><b>
+        <a href="Choose your photo.html" style="text-decoration:none; color:black;">Customize Your Product</a></b>
+  </div>
+      
+      <div class="a1"><b>S. K. T-Shirt Printing & Gift Gallery</b></div>
+    
+
+    
+      <div class="contact-container">
+          <h2>
+   <img src="logo.png" width="70px" height="70px" style="border-radius:10%;" class="img">
+ संपर्क करें <span style="color: blue;  font-size:60px;">Contact Us</span></h2>
+
+  😃 <strong>हमारा पता:</strong><br>
+    उत्तर प्रदेश, जिला - <span class="highlight-green">सीतापुर</span>, पोस्ट - <span class="highlight-green">कमलापुर</span><br>
+    रोड - जयरामपुर | निकट - <br>
+    रामेश्वरी त्रिपाठी विद्या मंदिर स्कूल वा
+    <span  style="color:red;">
+    <br>गुड्डू गारमेंट की दुकान।</span>
+  </p>
+  <p><strong>📞 मोबाइल:</strong><br>
+  9838881619, 9198127065</p>
+
+  
+  <p><strong>📸 Instagram:</strong><br>
+  <a href="https://www.instagram.com/mahendrajatav4308" target="_blank">@mahendrajatav4308</a></p>
+<p><strong>📸 Instagram:</strong><br>
+  <a href="https://www.instagram.com/saurabhindian03?igsh=MWVpNGVvNThvMzV4NQ==" >@saurabhindian03</a><br>
+
+  <p><strong>🎥 YouTube:</strong><br>
+  <a href="https://youtube.com/@saurabhindian03?si=9ICCKxUdPihzXB_a" target="_blank">S.K. Gift Gallery Channel</a></p>
+
+<div class="mess">
+  <span style="color:blue; font-size:25px;"><b>Message:-</b></span>
+  <form class="contact-form" onsubmit="return form()" action="T-shirt print business.html">
+    <span>👤 नाम:</span>
+    <input type="text" placeholder="अपना नाम लिखे " id="n1">
+
+    <label>📱 मोबाइल नंबर </label>
+    <input type="tel" placeholder="मोबाइल नंबर" id="n2" maxlength="10" pattern="\d{10}" title="Please Check Your Mobile Number">
+
+    <span>💬 मैसेज:</sapn>
+    <textarea rows="4" placeholder="आप क्या पूछना चाहते हैं?" id="n3"></textarea>
+
+    <button type="submit">भेजें</button>
+  </form>
+</div>
+</div>
+      </body>
+      <script>
+        function form(){
+        var a=document.getElementById("n1").value;
+        var b=document.getElementById("n2").value;
+        var c=document.getElementById("n3").value;
+        if(a==="" || b===""|| c==="")
+        
+        {
+          alert("Your felds is required || Please check your detels ❌❌");
+         return false;
+        }
+        if(!/^\d{10}$/.test(b))
+        {
+          alert("Please Check Your Mobile Number");
+          return false;
+        }
+        else{
+          alert("Your Message send  Thankyou 📩 😃  ")
+          document.querySelector(".contact-form").reset();
+          return true;
+          
+        }
+        }
+        
+        </script>
+</html>
