@@ -128,71 +128,60 @@ outline: 2px solid green;
     
 
   
-  
-    .menu{
-      background-color: white;
-      height: auto;
-      width: auto;
+      nav {
+      background-color: pink;
       position: sticky;
       top: 0;
+      z-index: 1000;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
     }
-    
-  
 
-      ul {
-  background-color: pink;
-  display: flex;      
-  justify-content: center;     
-  align-items: center;        
-  flex-wrap: wrap;             
-  padding: 10px;
-  margin: 0;
-  border-radius: 10px;
-  box-shadow: 0px 0px 8px black;
-  position: sticky;
-  top: 0;
-  z-index: 1000000;
-  
-}
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      margin: 0;
+      list-style: none;
+    }
 
-ul li {
-  list-style: none;
-  background-color: black;
-  color: white;
-  padding: 8px ;
-  font-size: 16px;
-  border-radius: 10px;
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: clamp(15px, 3vw, 20px);
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+      background-color: black;
+    }
 
-  display: inline-block;
-}
-ul li:active{
-  background-color: yellow;
-  color:red;
-  transition: 0.5;
-}
-li:hover{
-  background-color: lightgray;
-  color: black;
-  border:2px solid black;
-}
-#upload{
-  text-align: center;
-  background-color: #58fdf5 ;
-  font-size: 28px;
-  margin-block: 5px;
-  padding: 5px;
-  position: sticky;
-  top: 57px;
-z-index: 999999;
-border-radius: 10px;
-box-shadow: 0px 5px 0px white;
-border: 2px solid black;
-}
-#upload:hover{
-  background-color: gray;
-  color: white;
-}
-  
+    nav ul li a:hover {
+      background: white;
+      color: black;
+    }
+
+    /* Full width Customise Button */
+    .custom-btn {
+      display: block;
+      width: 100%;                 /* पूरी चौड़ाई */
+      margin: 0;                   /* कोई gap नहीं */
+      padding: 15px 0;
+      background: linear-gradient(45deg, #ff6699, #ff3366);
+      color: white;
+      text-align: center;
+      font-size: clamp(25px, 4vw, 24px);  /* responsive text */
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .custom-btn:hover {
+      background: linear-gradient(45deg, #ff3366, #cc0055);
+      color: black;
+    }
+
   
     .imgcolor {
   background-color: lightyellow;
@@ -542,19 +531,19 @@ display:inline-block;
      <span class="dot"></span>
   </div>
   
-  <div class="menu">
-<ul>
-  <b> 
-  <li>Home</li>
-      <a href="About us1.html" style="text-decoration:none; color:white;"><li>About us</li></a> 
-      <a href="Contact us1.html" style="text-decoration:none; color:white;"><li>Contact us</li></a>
-   <a href="My Order.html" style="text-decoration:none; color:white;"><li>My Order</li></a>
-   
-          </b>      
-  </ul>
-<a href="Choose your photo.html" style="text-decoration:none; color:black;">  <div id="upload"><b>Customize Your Product</b>
-  </div></a>
-  </div>
+    <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="About us1.html">About Us</a></li>
+      <li><a href="Contact us1.html">Contact Us</a></li>
+      <li><a href="My Order.html">My Orders</a></li>
+    </ul>
+  </nav>
+<a href="Choose your photo.html">
+  <!-- Full Width Customise Button -->
+  <button class="custom-btn">Customise Your Photo</button>
+</a>
+  
   <div class="imgcolor">
     
 
